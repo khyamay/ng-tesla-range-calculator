@@ -1,0 +1,14 @@
+<div class="tesla-counter">
+  <p class="tesla-counter__title">{{title}}</p>
+  <div class="tesla-counter__container cf">
+    <div class="tesla-counter__item" (keydown)="onKeyUp($event)" (blur)="onBlur($event)" (focus)="onFocus($event)" tabindex="0">
+      <p class="tesla-counter__number">{{value}}
+        <span>{{unit}}</span>
+      </p>
+      <div class="tesla-counter__controls" tabindex="-1">
+        <button tabindex="-1" (click)="increment()" [disabled]="value === max"></button>
+        <button tabindex="-1" (click)="decrement()" [disabled]="value === min"></button>
+      </div>
+    </div>
+  </div>
+</div>

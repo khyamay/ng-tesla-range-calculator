@@ -1,0 +1,20 @@
+<div class="tesla-wheels">
+  <p class="tesla-wheels__container">Wheels</p>
+  <div class="tesla-wheels__container cf">
+    <label
+      *ngFor="let size of sizes"
+      class="tesla-wheels__item tesla-wheels__item--{{size}}"
+      [class.tesla-wheels__item--active]="value === size"
+      [class.tesla.wheels__item--focused]="focused === size">
+      <input
+        type="radio"
+        name="wheelsize"
+        [attr.value]="size"
+        [checked]="value === size"
+        (blur)="onBlur(size)"
+        (change)="onChange(size)"
+        (focus)="onFocus(size)" />
+        <p>{{size}}<p>
+    </label>
+  </div>
+</div>

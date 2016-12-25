@@ -1,0 +1,17 @@
+<div class="tesla-climate">
+  <label class="tesla-climate__item"
+    [class.tesla-heat]="!limit"
+    [class.tesla-climate__item--active]="value"
+    [class.tesla-climate__item--focused]="foucsed === value">
+    <p>{{(limit ? 'ac' : 'heat')}} {{value ? 'on' : 'off'}}</p>
+    <i class="tesla-climate__icon"></i>
+    <input
+      type="checkbox"
+      name="climate"
+      [checked]="value"
+      (change)="onChange(value)"
+      (blur)="onBlur($event)"
+      (focus)="onFocus($event)"
+      >
+    </label>
+</div>

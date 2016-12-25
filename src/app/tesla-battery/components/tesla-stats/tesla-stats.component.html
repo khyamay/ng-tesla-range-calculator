@@ -1,0 +1,8 @@
+<div class="tesla-stats">
+  <ul>
+    <li *ngFor="let stat of stats">
+      <div class="tesla-stats-icon tesla-stats-icon--{{stat.model | lowercase }}"></div>
+      <p>{{stat.miles}}</p>
+    </li>
+  </ul>
+</div>
